@@ -71,3 +71,18 @@
 
 kubeadm join 172.16.40.140:6443 --token c9tb9y.u4vp0520880rnhgi \
 	--discovery-token-ca-cert-hash sha256:6d99a1fc70b316fb96dcccee53acdc520dcf81b838a9bcf2bf836bef1a05d4e2 
+
+
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  labels:
+    role: myrole
+spec:
+  containers:
+    - name: web
+      image: nginx
+
